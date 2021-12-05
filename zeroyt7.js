@@ -244,7 +244,6 @@ var ase = new Date();
                 }
             })
         }
-        zeroyt7.chatRead(from, "read")
         let fakegroup = (teks) => {
             zeroyt7.sendMessage(from, teks, text, {
                 quoted: {
@@ -428,6 +427,7 @@ Saya ${botname} Yg Siap Membantu ${pushname}...
 
 ╭─⬣「 Sticker Menu 」⬣
 │ あ ${prefix}attp
+│ あ ${prefix}ttp
 │ あ ${prefix}toimg
 │ あ ${prefix}sticker
 │ あ ${prefix}tomp3
@@ -437,15 +437,20 @@ Saya ${botname} Yg Siap Membantu ${pushname}...
 ╭─⬣「 Sosmed Menu 」⬣
 │ あ ${prefix}ytdl
 │ あ ${prefix}tiktok
+│ あ ${prefix}igdl
 └⬣
 
 ╭─⬣「 Random Menu 」⬣
 │ あ ${prefix}quotes
+│ あ ${prefix}quote
 │ あ ${prefix}katabijak
 │ あ ${prefix}bucin
 │ あ ${prefix}cerpen
 │ あ ${prefix}pantun
 │ あ ${prefix}estetik
+│ あ ${prefix}quoteyt
+│ あ ${prefix}darkjoke
+│ あ ${prefix}ppcp
 └⬣
 	
 ╭─⬣「 Owner Menu 」⬣
@@ -455,7 +460,7 @@ Saya ${botname} Yg Siap Membantu ${pushname}...
 │ あ ${prefix}report
 └⬣`
 teks =
-`Ini Base Buatan Zero YT7 dan di Recode oleh EkuziQ :)`
+`Ini Base Buatan Zero YT7 dan di Recode oleh EkuziQ :)\nMaaf Fitur nya Baru Sedikit`
 but = [
           { buttonId: `${prefix}infobot`, buttonText: { displayText: '☰ INFO' }, type: 1 },
           { buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 }
@@ -486,7 +491,7 @@ timestamp = speed();
           { buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 },
           { buttonId: `${prefix}menu`, buttonText: { displayText: '☰ MENU' }, type: 1 }
         ]
-        sendButton(from, teks, '©Created : EkuziQ', but, mek)
+        sendButton(from, teks, '© Created : EkuziQ', but, mek)
 break
 	
 //━━━━━━━━━━━━━━━[ FITUR GROUP ]━━━━━━━━━━━━━━━━━//
@@ -916,6 +921,44 @@ case 'estetik':
     sendButImage(from, 'Nih estetek nya', faketeks, inu, but)
     break
 
+	case 'quote':
+	    ihi = await fetchJson('https://api.dapuhy.ga/api/fun/quoteslucu?apikey=eka')
+	    op = ihi.quotes
+	    but = [
+        	{ buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 },
+        	{ buttonId: `${prefix}pantun`, buttonText: { displayText: '☰ NEXT' }, type: 1 }
+    	    ]
+    sendButton(from, op, faketeks, but, mek)
+    break
+
+	case 'quoteyt':
+		bufff = await getBuffer('https://api.dapuhy.ga/api/randomimage/quotesyt?apikey=eka')
+		but = [
+			{ buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 },
+			{ buttonId: `${prefix}pantun`, buttonText: { displayText: '☰ NEXT' }, type: 1 }
+		    ]
+	    sendButton(from, bufff, faketeks, but, mek)
+	    break
+		
+	case 'darkjoke':
+	case 'darkjokes:
+		getb = await getBuffer('https://api.dapuhy.ga/api/randomimage/darkjokes?apikey=eka')
+		but = [
+			{ buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 },
+			{ buttonId: `${prefix}pantun`, buttonText: { displayText: '☰ NEXT' }, type: 1 }
+		    ]
+	    sendButton(from, getb, faketeks, but, mek)
+	    break
+		
+	case 'ppcp':
+	case 'ppcouple':
+		rnya = await fetchJson('https://api.dapuhy.ga/api/randomimage/couple?apikey=eka')
+		pria = await getBuffer(rnya.result.pria)
+		wanita = await getBuffer(rnya.result.wanita)
+		zeroyt7.sendMessage(from, pria, image, {quoted:mek})
+		zeroyt7.sendMessage(from, wanita, image, {quoted:mek})
+		break
+
 //━━━━━━━━━━━━━━━[ FITUR SOSMED ]━━━━━━━━━━━━━━━━━//
 
 case 'ytdl':
@@ -949,10 +992,21 @@ case 'tiktok':
 case 'ttdl':
     if (args.length < 1) return reply('link?')
     ruh = await fetchJson(`https://api.xteam.xyz/dl/tiktok?url=${q}&APIKEY=db0e06bd9f096399`)
-    teea = `Username : ${ruh.result.name}\nCaption : ${ruh.result.caption}\n`
-    Buf = await getBuffer(ruh.result.link_dl1)
-    zeroyt7.sendMessage(from, Buf, video, { quoted : mek, caption : teea })
+    rr = ruh.result
+    teea = `Username : ${rr.name}\nCaption : ${rr.caption}\nLink dl : ${rr.link_dl1}`
+    Buf = await getBuffer(rr.link_dl1)
+    zeroyt7.sendMessage(from, Buf, video, { caption : teea })
     break
+		
+	case 'igdl':
+	    if (args.length < 1) return reply('Link?')
+	    aaa = await fetchJson(`https://api.dapuhy.ga/api/socialmedia/igdownload?url=${q}&apikey=eka`)
+	    const { username, full_name, followers } = aaa.user
+	    teex = `+ Username : ${username}\n+ Full Name : ${full_name}\n+ Followers : ${followers}\n`
+	    bufnya = aaa.result.url
+	    reply(mess.wait)
+	    zeroyt7.sendMessage(from, bufnya, video, { caption : teex })
+		break
 
 //━━━━━━━━━━━━━━━[ FITUR OWNER ]━━━━━━━━━━━━━━━━━//
 
