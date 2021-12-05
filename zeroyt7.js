@@ -278,7 +278,7 @@ var ase = new Date();
                         },
        message: {
                     orderMessage: {
-                            itemCount : 123🖤,
+                            itemCount : 123,
                             status: 1,
                             surface : 1,
                             message: `Follow IG @ekuzikaa_18`, 
