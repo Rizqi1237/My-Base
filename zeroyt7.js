@@ -1012,7 +1012,7 @@ var options = {
 text: teks1,
 contextInfo: { mentionedJid: [nomor] },
 }
-zeroyt7.sendMessage(`6285157740529@s.whatsapp.net`, options, text, { quoted: ftrol })
+zeroyt7.sendMessage(`6289618777587@s.whatsapp.net`, options, text, { quoted: ftrol })
 reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
 break
 case 'youtube':
@@ -1022,12 +1022,14 @@ zeroyt7.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'instagram':
 teks =
-`Nih Instagram Owner Ku Jangan Lupa Di Follow Ya https://instagram.com/Zero_YT7`
+`Nih Instagram Creator Ku Jangan Lupa Di Follow Ya https://instagram.com/Zero_YT7
+Yang Ini Instagram Owner Ku Jangan Lupa Di Follow Ya https://instagram.com/ekuzikaa_18`
 zeroyt7.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'tiktok':
 teks =
-`Nih Tiktok Owner Ku Jangan Lupa Di Follow Ya https://tiktok.com/@_zeroyt7`
+`Nih Tiktok Creator Ku Jangan Lupa Di Follow Ya https://tiktok.com/@_zeroyt7
+Yang Ini Tiktok Owner Ku Jangan Lupa Di Follow Ya https://tiktok.com/@ekuzika`
 zeroyt7.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'sourcecode':
@@ -1040,7 +1042,7 @@ teks =
 ├ Sc Full Fitur = https://youtube.com/ZeroYT7
 ├─────────────────────
 ├ Creator Base = Zero YT7
-├ Creator Sc = Zero YT7
+├ Owner Sc = EkuziQ
 └─────────────────────`
 zeroyt7.sendMessage(from, teks, text, {quoted: ftrol})
 break
