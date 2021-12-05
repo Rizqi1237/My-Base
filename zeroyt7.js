@@ -941,7 +941,7 @@ case 'estetik':
 	    break
 		
 	case 'darkjoke':
-	case 'darkjokes:
+	case 'darkjokes':
 		getb = await getBuffer('https://api.dapuhy.ga/api/randomimage/darkjokes?apikey=eka')
 		but = [
 			{ buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 },
