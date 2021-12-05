@@ -36,6 +36,8 @@
 <p align="center">
 <a href="https://instagram.com/ekuzikaa_18"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/> 
 <a href="https://wa.me/6289618777587"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://vm.tiktok.com/ZSeUSEmuQ/"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" />
+
 </p>
 
 ## ```SETTING```
@@ -44,9 +46,17 @@
 - Owner name [Here](https://github.com/Rmdhn-20/My-Base/blob/master/setting.json#L13)
 - Botname [Here](https://github.com/Rmdhn-20/My-Base/blob/master/setting.json#L14)
 
-## ```DONASI```
+ ## ```Ganti Session nya```
+ - [`Disini`](https://github.com/Rmdhn-20/My-Base/blob/master/zeroyt7.json)
+ 
+ ## ```Run railway.app```
+ 
+ [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FRmdhn-20%2FMy-Base)
+
+ ## ```DONASI```
 
 - [`SAWERIA`](https://saweria.co/Ekuzika)
+- [`DANA`](https://link.dana.id/qr/3wll8i89)
 
 
 # Requirements
@@ -67,6 +77,7 @@ pkg install imagemagick
 pkg install bash
 git clone https://github.com/Rmdhn-20/My-Base.git
 cd My-Base
+bash install.sh
 npm install
 npm start
 ```
