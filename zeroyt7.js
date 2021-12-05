@@ -1,12 +1,19 @@
 //NEW BASE BY ZERO YT7
 //RECODE SESUKA HATIMU JANGAN HPUS CREATOR NYA
 //MAAF BASE NYA JELEK
+//RECODE BY EKUZIQ
+//CANTUMIN NAMA GUE JUGA AJG
 
 //FOLLOW ALL SOSIAL MEDIAML ME
 //YOUTUBE : Zero YT7
 //INSTAGRAM : @Zero_YT7
 //TIKTOK : @_zeroyt7
 //GITHUB : Zero-YT7
+
+//FOLLOW JUGA SOSMED GUE
+//INSTAGRAM : @ekuzikaa_18
+//TIKTOD : @ekuzika
+//GITHUB : Rmdhn-20
 
 let { fetchJson, kyun, fetchText } = require('./lib/fetcher')
 let { color, bgcolor } = require('./lib/color')
@@ -82,7 +89,7 @@ module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
 		let Verived = "0@s.whatsapp.net"
 		let txt = mek.message.conversation
 		let botNumber = zeroyt7.user.jid
-		let ownerNumber = [`${owner}@s.whatsapp.net`, `6285157740529@s.whatsapp.net`, '0', '0', '0']
+		let ownerNumber = [`${owner}@s.whatsapp.net`, `0`, '0', '0', '0']
 		let isGroup = from.endsWith('@g.us')
 		let sender = isGroup ? mek.participant : mek.key.remoteJid
 		let totalchat = await zeroyt7.chats.all()
@@ -271,10 +278,10 @@ var ase = new Date();
                         },
        message: {
                     orderMessage: {
-                            itemCount : 123,
+                            itemCount : 123🖤,
                             status: 1,
                             surface : 1,
-                            message: `SUBSCRIBE ZERO YT7`, 
+                            message: `Follow IG @ekuzikaa_18`, 
                             orderTitle: `Follow IG @ekuzikaa_18`,
                             thumbnail: zero, //Gambarnye
                             sellerJid: '0@s.whatsapp.net' 
@@ -397,7 +404,7 @@ Saya ${botname} Yg Siap Membantu ${pushname}...
 └❏
 
 ╭─❒ 「 User Info 」 ❒
-├ Status : ${isOwner ? 'Owner' : 'User'}
+├ Status : ${isOwner ? 'Owner 🔰' : 'User 🗿'}
 ├ Nama User : ${pushname}
 ├ Nomor User : ${sender.split('@')[0]}
 ├ Bio User : ${bio.status}
@@ -425,6 +432,11 @@ Saya ${botname} Yg Siap Membantu ${pushname}...
 │ あ ${prefix}sticker
 │ あ ${prefix}tomp3
 │ あ ${prefix}tovideo
+└⬣
+
+╭─⬣「 Sosmed Menu 」⬣
+│ あ ${prefix}ytdl
+│ あ ${prefix}tiktok
 └⬣
 
 ╭─⬣「 Random Menu 」⬣
@@ -496,7 +508,7 @@ if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
 if (isWelkom) return reply('welcome sudah aktif')
 _welkom.push(from)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`✓Sukses mengaktifkan fitur welcome di group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukses mengaktifkan fitur welcome di group\`\`\` *${groupMetadata.subject}*`)
 break
 case 'welcomeoff':
 if (!isGroup) return reply(mess.only.group)
@@ -505,7 +517,7 @@ if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
 if (!isWelkom) return reply('welcome sudah off sebelumnya')
 _welkom.splice(from, 1)
 fs.writeFileSync('./database/welcome.json', JSON.stringify(_welkom))
-reply(`\`\`\`✓Sukses menonaktifkan fitur welcome di group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukses menonaktifkan fitur welcome di group\`\`\` *${groupMetadata.subject}*`)
 break
 case 'antilink' :
 if (!isGroup) return reply(mess.only.group)
@@ -524,7 +536,7 @@ if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
 if (isAntiLink) return reply('anti link sudah on')
 _antilink.push(from)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`✓Sukses mengaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukses mengaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
 break
 case 'antilinkoff' :
 if (!isGroup) return reply(mess.only.group)
@@ -533,7 +545,7 @@ if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
 if (!isAntiLink) return reply('anti link sudah off sebelumnya')
 _antilink.splice(from, 1)
 fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-reply(`\`\`\`✓Sukses menonaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukses menonaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
 break
 case 'antivirtex' :
 if (!isGroup) return reply(mess.only.group)
@@ -552,7 +564,7 @@ if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
 if (isAntiVirtex) return reply('anti virtex group sudah aktif sebelumnya')
 _antivirtex.push(from)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
-reply(`\`\`\`Sukses mengaktifkan mode anti virtex di group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukses mengaktifkan mode anti virtex di group\`\`\` *${groupMetadata.subject}*`)
 break
 case 'antivirtexoff' :
 if (!isGroup) return reply(mess.only.group)
@@ -561,7 +573,7 @@ if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
 if (!isAntiVirtex) return reply('Mode anti virtex sudah nonaktif sebelumnya')
 _antivirtex.splice(from, 1)
 fs.writeFileSync('./database/antivirtex.json', JSON.stringify(_antivirtex))
-reply(`\`\`\`✓Sukes menonaktifkan mode anti virtex di group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukes menonaktifkan mode anti virtex di group\`\`\` *${groupMetadata.subject}*`)
 break
 case 'group' :
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -577,14 +589,14 @@ case 'groupbuka' :
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-reply(`\`\`\`✓Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
 zeroyt7.groupSettingChange(from, GroupSettingChange.messageSend, false)
 break
 case 'grouptutup' :
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-reply(`\`\`\`✓Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
 zeroyt7.groupSettingChange(from, GroupSettingChange.messageSend, true)
 break
 case 'linkgrup' :
@@ -680,14 +692,14 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 zeroyt7.groupUpdateSubject(from, `${body.slice(9)}`)
-zeroyt7.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
+zeroyt7.sendMessage(from, `\`\`\`[ ✓ ] Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
 break
 case 'setdesc':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 zeroyt7.groupUpdateDescription(from, `${body.slice(9)}`)
-zeroyt7.sendMessage(from, `\`\`\`✓Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
+zeroyt7.sendMessage(from, `\`\`\`[ ✓ ] Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
 break
 case 'setpp':
 if (!isGroup) return reply(mess.only.group)
@@ -696,7 +708,7 @@ if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 media = await zeroyt7.downloadAndSaveMediaMessage(mek, './database/media_user')
 await zeroyt7.updateProfilePicture(from, media)
 reply(mess.wait)
-reply(`\`\`\`✓Sukses Mengganti Profil Group\`\`\` *${groupMetadata.subject}*`)
+reply(`\`\`\`[ ✓ ] Sukses Mengganti Profil Group\`\`\` *${groupMetadata.subject}*`)
 break
 case 'hidetag':
 if (!isGroup) return reply(mess.only.group)
@@ -722,6 +734,11 @@ break
 case 'attp':
 if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
 buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
+zeroyt7.sendMessage(from, buffer, sticker, { quoted: ftrol })
+break
+case 'ttp':
+if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
+buffer = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${encodeURI(q)}`)
 zeroyt7.sendMessage(from, buffer, sticker, { quoted: ftrol })
 break
 case 'sticker':
@@ -899,11 +916,13 @@ case 'estetik':
     sendButImage(from, 'Nih estetek nya', faketeks, inu, but)
     break
 
+//━━━━━━━━━━━━━━━[ FITUR SOSMED ]━━━━━━━━━━━━━━━━━//
+
 case 'ytdl':
     if (args.length < 1) return reply('Link nya manaa??')
     yt = await fetchJson(`https://api.zekais.com/youtube?url=${args[0]}&apikey=lbLbxbVw`)
     an = await getBuffer(yt.thumb)
-    resnya = `*Y O U T U B E*\n\nJudul : ${yt.title}\nChannel : ${yt.channel}\nPublished : ${yt.published}\nViews : ${yt.views}\nLikes : ${yt.likes}\nDescription : ${yt.desc}\n\n`
+    resnya = `*Y O U T U B E - B U T T O N*\n\nJudul : ${yt.title}\nChannel : ${yt.channel}\nPublished : ${yt.published}\nViews : ${yt.views}\nLikes : ${yt.likes}\nDescription : ${yt.desc}\n\n`
     tesk = `Silahkan Pilih Mau Download Audio or Video`
     but = [
         { buttonId: `${prefix}audio ${args[0]}`, buttonText: { displayText: '☰ AUDIO' }, type: 1 },
@@ -916,14 +935,23 @@ case 'audio':
     if (args.length < 1) return reply('Link?')
     yu = await fetchJson(`https://api.zekais.com/youtube?url=${args[0]}&apikey=lbLbxbVw`)
     let { url } = yu.audio[0]
-    sendMediaURL(from, `${url}`, {quoted:mek})
+    sendMediaURL(from, `${url}`, '', {quoted:mek})
     break
 
 case 'video':
     if (args.length < 1) return reply('Link?')
     ut = await fetchJson(`https://api.zekais.com/youtube?url=${args[0]}&apikey=lbLbxbVw`)
     let aha = ut.video[0].url
-    sendMediaURL(from, `${aha}`, {quoted:mek})
+    sendMediaURL(from, `${aha}`, '', {quoted:mek})
+    break
+
+case 'tiktok':
+case 'ttdl':
+    if (args.length < 1) return reply('link?')
+    ruh = await fetchJson(`https://api.xteam.xyz/dl/tiktok?url=${q}&APIKEY=db0e06bd9f096399`)
+    teea = `Username : ${ruh.result.name}\nCaption : ${ruh.result.caption}\n`
+    Buf = await getBuffer(ruh.result.link_dl1)
+    zeroyt7.sendMessage(from, Buf, video, { quoted : mek, caption : teea })
     break
 
 //━━━━━━━━━━━━━━━[ FITUR OWNER ]━━━━━━━━━━━━━━━━━//
